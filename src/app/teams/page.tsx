@@ -42,7 +42,7 @@ const Teams = () => {
             {teamMembers.map((member, index) => (
               <TeamsCard
                 key={index}
-                image={member.picture?.large}
+                image={member.picture?.medium}
                 job={member.phone}
                 name={`${member.name.first} ${member.name.last}`}
               />
