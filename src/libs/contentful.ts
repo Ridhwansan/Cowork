@@ -53,3 +53,23 @@ export const getEntryFacilitiesCard = async () => {
     console.log(error);
   }
 };
+
+export const getEntryAbout = async () => {
+  try {
+    const responseAbout = await client.getEntries({
+      content_type: "aboutContent",
+    });
+
+    const about = responseAbout.items.map((about: any) => {
+      return {
+        heroImg: about.fields.heroImg,
+        aboutdesc: about.fields.aboutdesc,
+        journeyimage: about.fields.journeyimage,
+        founderimage: about.fields.founderimage,
+      };
+    });
+    return about[0];
+  } catch (error) {
+    console.log(error);
+  }
+};

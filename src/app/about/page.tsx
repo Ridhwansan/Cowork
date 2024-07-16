@@ -1,4 +1,5 @@
 import TeamsCard from "@/components/TeamsCard";
+import { getEntryAbout } from "@/libs/contentful";
 import {
   Box,
   Container,
@@ -11,7 +12,8 @@ import {
 import Image from "next/image";
 import React from "react";
 
-const About = () => {
+export default async function About() {
+  const about = await getEntryAbout();
   return (
     <Box pt={{ base: "100px", md: "65px" }}>
       <Container maxW="7xl" gap="40">
@@ -40,17 +42,12 @@ const About = () => {
         </Flex>
         <Flex justifyContent="center" alignItems="center">
           <Text lineHeight="180%" width="800px" textAlign="center">
-            At Cowork, we understand the dynamic needs of modern professionals
-            and businesses. Our spaces are more than just offices, they are
-            vibrant communities where ideas thrive, and innovation flourishes.
-            Whether you are a freelancer, startup, or established enterprise, we
-            provide the perfect environment for you to grow, connect, and
-            succeed 🚀.
+            {about?.aboutdesc}
           </Text>
         </Flex>
         <Box width="100%" height="auto" py="54px">
           <Image
-            src="/aboutusjumbo.png"
+            src={`https:${about?.heroImg.fields.file.url}`}
             alt="about us image"
             layout="responsive"
             width={0}
@@ -72,7 +69,7 @@ const About = () => {
               height={{ base: "400px", md: "600px" }}
             >
               <Image
-                src="/founder.png"
+                src={`https:${about?.journeyimage.fields.file.url}`}
                 alt="founder of cowork"
                 objectFit="cover"
                 layout="fill"
@@ -166,7 +163,7 @@ const About = () => {
               margin="auto"
             >
               <Image
-                src="/coworkfounder.png"
+                src={`https:${about?.founderimage.fields.file.url}`}
                 alt="founder of cowork"
                 objectFit="cover"
                 layout="fill"
@@ -233,6 +230,4 @@ const About = () => {
       {/* End Teams */}
     </Box>
   );
-};
-
-export default About;
+}
