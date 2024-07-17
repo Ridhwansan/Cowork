@@ -12,6 +12,8 @@ import {
 import Image from "next/image";
 import React from "react";
 
+export const revalidate = 30;
+
 export default async function About() {
   const about = await getEntryAbout();
   return (
