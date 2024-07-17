@@ -35,7 +35,7 @@ const TeamsCard: FC<TeamsCardProps> = ({ name, job, image }) => {
           rounded={"lg"}
           mt={-12}
           pos={"relative"}
-          height={"260px"}
+          height={"200px"}
           _after={{
             transition: "all .3s ease",
             content: '""',
@@ -56,8 +56,8 @@ const TeamsCard: FC<TeamsCardProps> = ({ name, job, image }) => {
         >
           <Image
             rounded={"lg"}
-            height={280}
-            width={282}
+            height={220}
+            width={222}
             objectFit={"cover"}
             src={image}
             alt="#"

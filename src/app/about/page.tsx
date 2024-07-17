@@ -225,6 +225,16 @@ export default async function About() {
                 job="Technology and Innovation"
                 name="Maya Patel"
               />
+              <TeamsCard
+                image="https://images.unsplash.com/photo-1463453091185-61582044d556?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                job="Head of Security"
+                name="Lil John"
+              />
+              <TeamsCard
+                image="https://images.unsplash.com/photo-1584999734482-0361aecad844?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBlcnNvbiUyMHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww"
+                job="Network Management"
+                name="Messer"
+              />
             </Flex>
           </Flex>
         </Container>
