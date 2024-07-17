@@ -79,7 +79,7 @@ const PricingCard = () => {
                 High-speed internet
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />5 hours of
+                <ListIcon as={FaCheckCircle} color="green.500" />
                 Public Meeting Room
               </ListItem>
             </List>
@@ -136,7 +136,7 @@ const PricingCard = () => {
               <List spacing={3} textAlign="start" px={12}>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  Personal desk in a shared area
+                  Personal desk area
                 </ListItem>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
