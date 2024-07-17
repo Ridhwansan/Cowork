@@ -5,6 +5,8 @@ import { getEntryFacilitiesCard } from "@/libs/contentful";
 import { Box, Button, Container, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
+export const revalidate = 30;
+
 export default async function Services() {
   const facilities = await getEntryFacilitiesCard();
   console.log("ini isi facilities", facilities);

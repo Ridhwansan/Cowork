@@ -5,6 +5,8 @@ import { getEntryCowork } from "@/libs/contentful";
 import { Box, Button, Container, Flex, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
+export const revalidate = 30;
+
 export default async function Home() {
   const company = await getEntryCowork();
 
